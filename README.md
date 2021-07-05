@@ -14,3 +14,5 @@ Green stocks returned a significantly higher percentage in 2017 vs 2018.  In 201
 
 ![2018_Table](https://user-images.githubusercontent.com/86164867/124499243-8d34f380-dd72-11eb-9680-e40eed19104b.PNG)
 
+##### Refactored Code vs Starter Code Execution Times
+
