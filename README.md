@@ -20,8 +20,6 @@ The refactored code is significantly more efficient than the original code, and 
 
 ##### Original Code
 
-Sub CompiledRoutines()
-
     Dim startTime As Single
     Dim endTime  As Single
 
@@ -139,7 +137,5 @@ Sub CompiledRoutines()
     Worksheets("2018").Activate
     Range("C2:F3013").NumberFormat = "$0.00"
    
-
-End Sub
 
 
