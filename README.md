@@ -20,7 +20,7 @@ The refactored code is significantly more efficient than the original code, and 
 
 ##### Original Code
 
-'''Sub CompiledRoutines()
+Sub CompiledRoutines()
 
     Dim startTime As Single
     Dim endTime  As Single
@@ -28,8 +28,6 @@ The refactored code is significantly more efficient than the original code, and 
     yearValue = InputBox("What year would you like to run the analysis on?")
     
         startTime = Timer
-    
-'1) Format the output sheet on the "All Stocks Analysis" worksheet.
 
     Worksheets("All Stocks Analysis").Activate
 
@@ -39,8 +37,6 @@ The refactored code is significantly more efficient than the original code, and 
     Cells(3, 1).Value = "Ticker"
     Cells(3, 2).Value = "Total Daily Volume"
     Cells(3, 3).Value = "Return"
-    
-'2) Initialize an array of all tickers.
     
     'Create ticker array
     Dim tickers(12) As String
@@ -57,32 +53,26 @@ The refactored code is significantly more efficient than the original code, and 
     tickers(9) = "SPWR"
     tickers(10) = "TERP"
     tickers(11) = "VSLR"
-    
-'3a) Initialize variables for the starting price and ending price.
+
 
     Dim startingPrice As Single
     Dim endingPrice As Single
     
-'3b) Activate the data worksheet
+
 
     Worksheets(yearValue).Activate
     
-'3C) Find the number of rows to loop over.
 
     RowCount = Cells(Rows.Count, "A").End(xlUp).Row
-    
-'4) Loop through the tickers
+   
 
     For i = 0 To 11
         ticker = tickers(i)
         totalVolume = 0
         
-        '5) Loop through rows in the data
         
         Worksheets(yearValue).Activate
         For j = 2 To RowCount
-            
-            '5a) Find total volume for current ticker
             
             If Cells(j, 1).Value = ticker Then
             
@@ -90,15 +80,12 @@ The refactored code is significantly more efficient than the original code, and 
                 
             End If
             
-            '5b) Find starting price for current ticker
-            
             If Cells(j - 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
             
                 startingPrice = Cells(j, 6).Value
                 
             End If
-            
-            '5c) Find ending price for current ticker
+         
             
             If Cells(j + 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
             
@@ -107,8 +94,6 @@ The refactored code is significantly more efficient than the original code, and 
             End If
         
         Next j
-
-'6) Output data for current ticker
 
     Worksheets("All Stocks Analysis").Activate
     Cells(4 + i, 1).Value = ticker
@@ -119,8 +104,7 @@ The refactored code is significantly more efficient than the original code, and 
 
     endTime = Timer
     MsgBox "This code ran in " & (endTime - startTime) & " seconds for the year " & (yearValue)
-    
-'8) Formatting
+
 
     Worksheets("All Stocks Analysis").Activate
     Range("A3:C3").Font.Bold = True
@@ -156,4 +140,6 @@ The refactored code is significantly more efficient than the original code, and 
     Range("C2:F3013").NumberFormat = "$0.00"
    
 
-End Sub'''
+End Sub
+
+
