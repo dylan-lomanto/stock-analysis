@@ -281,5 +281,9 @@ The refactored code is significantly more efficient than the original code, and 
     endTime = Timer
     MsgBox "This code ran in " & (endTime - startTime) & " seconds for the year " & (yearValue)
 
+##### Refactored Code Run-Times
 
+![VBA_Challenge_2017](https://user-images.githubusercontent.com/86164867/124501093-cde23c00-dd75-11eb-8a0f-20bf61136a36.PNG)
+
+![VBA_Challenge_2018](https://user-images.githubusercontent.com/86164867/124501102-d175c300-dd75-11eb-8e22-ed26132a233f.PNG)
 
