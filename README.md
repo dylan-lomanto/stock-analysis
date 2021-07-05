@@ -287,3 +287,12 @@ The refactored code is significantly more efficient than the original code, and 
 
 ![VBA_Challenge_2018](https://user-images.githubusercontent.com/86164867/124501102-d175c300-dd75-11eb-8e22-ed26132a233f.PNG)
 
+### Summary
+
+#### General Advantages of Refactored Code
+
+The goal of reactoring code is to make it run more efficiently, either to make it run faster over the same dataset or for it to scale over a larger dataset.  Refactoring consists of eliminating redundant steps and simplifying the code while retaining full functionality. The refactoring process can cause the code to break if not done carefullly, so it is important to retain a copy of the original functional code.
+
+#### General Advantages of Refactored VBA Script
+
+In our example, the main advantage of the refactored code is that it is able to pull all relevant data points from the set on its first loop through the data. The original code only pulled one data point per loop, causing it to have to reloop over the dataset many times. 
