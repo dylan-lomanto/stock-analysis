@@ -145,7 +145,6 @@ The refactored code is significantly more efficient than the original code, and 
 
 ##### Refactored Code
 
-AllStocksAnalysisRefactored_StarterCode()
     Dim startTime As Single
     Dim endTime  As Single
 
